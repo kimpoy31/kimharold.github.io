@@ -25,6 +25,29 @@
       .carousel-thumb.selected {
         border-color: #2563eb;
       }
+      /* Added to improve horizontal scroll of carousel */
+      .carousel-scroll-area {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+      }
+      .carousel-flex-row {
+        min-width: max-content;
+        width: max-content;
+        display: flex;
+        gap: 0.75rem; /* matches Tailwind gap-3 */
+      }
+      /* Show a visible scrollbar for the carousel for accessibility */
+      .carousel-scroll-area::-webkit-scrollbar {
+        height: 12px;
+      }
+      .carousel-scroll-area::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 6px;
+      }
+      .carousel-scroll-area::-webkit-scrollbar-track {
+        background-color: #f3f4f6;
+      }
     </style>
   </head>
 
@@ -53,8 +76,43 @@
         ></div>
 
         <!-- Thumbnails -->
-        <div class="mt-4 overflow-x-auto">
-          <div class="flex gap-3">
+        <div
+          class="mt-4 carousel-scroll-area"
+          tabindex="0"
+          aria-label="Media carousel"
+          style="padding-bottom: 0.25rem"
+        >
+          <div class="carousel-flex-row">
+            <img
+              src="../assets/images/project1/tabulatorAuth.jpeg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/tabulatorAuth.jpeg"
+            />
+            <img
+              src="../assets/images/project1/tabulator2.jpeg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/tabulator2.jpeg"
+            />
+            <img
+              src="../assets/images/project1/tabulationAdmin.jpeg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/tabulationAdmin.jpeg"
+            />
+            <img
+              src="../assets/images/project1/tabulationModal.jpeg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/tabulationModal.jpeg"
+            />
+            <img
+              src="../assets/images/project1/tabulationJudge.jpeg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/tabulationJudge.jpeg"
+            />
             <img
               src="../assets/images/project1/thumbnailTalentComp.jpg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg selected"
@@ -119,10 +177,11 @@
       <section class="mb-4">
         <h2 class="text-lg font-bold">Github Repository</h2>
         <a
-          href="https://github.com/kimpoyyy31/tabulator-system"
+          href="https://github.com/kimpoy31/hr_tabulator_v2"
           target="_blank"
           rel="noopener noreferrer"
-          >https://github.com/kimpoyyy31/tabulator-system</a
+          class="btn btn-link pl-0"
+          >https://github.com/kimpoy31/hr_tabulator_v2</a
         >
       </section>
       <!-- Tech Stack -->
@@ -175,6 +234,19 @@
 
       thumbs.forEach((t, i) => t.addEventListener("click", () => showMedia(i)));
       showMedia(0);
+
+      // Optional: if carousel is focused, allow scrolling with arrow keys for accessibility
+      const carouselScrollArea = document.querySelector(
+        ".carousel-scroll-area"
+      );
+      carouselScrollArea &&
+        carouselScrollArea.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") {
+            carouselScrollArea.scrollBy({ left: 120, behavior: "smooth" });
+          } else if (e.key === "ArrowLeft") {
+            carouselScrollArea.scrollBy({ left: -120, behavior: "smooth" });
+          }
+        });
     </script>
     <script>
       document.getElementById("current-year").textContent =
