@@ -60,11 +60,13 @@
       <!-- Header -->
       <header class="mb-6">
         <h1 class="text-3xl font-bold mb-2">
-          Real-Time Event Tabulation System
+          Event Attendance Monitoring System
         </h1>
         <p class="text-base-content/70 max-w-3xl">
-          A production-used system for live judged events, providing real-time
-          score aggregation, automated ranking, and instant result generation.
+          This project is a lightweight attendance monitoring system developed
+          for a one-time HR event with a large number of participants. The
+          primary goal was fast deployment and reliable on-site usage rather
+          than long-term scalability.
         </p>
       </header>
 
@@ -84,92 +86,63 @@
         >
           <div class="carousel-flex-row">
             <img
-              src="../assets/images/project1/tabulatorAuth.jpeg"
+              src="../assets/images/project3/attendanceGuest.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/tabulatorAuth.jpeg"
+              data-src="../assets/images/project3/attendanceGuest.jpeg"
             />
             <img
-              src="../assets/images/project1/tabulator2.jpeg"
+              src="../assets/images/project3/attendanceAuth.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/tabulator2.jpeg"
+              data-src="../assets/images/project3/attendanceAuth.jpeg"
             />
             <img
-              src="../assets/images/project1/tabulationAdmin.jpeg"
+              src="../assets/images/project3/attendanceAdmin.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/tabulationAdmin.jpeg"
+              data-src="../assets/images/project3/attendanceAdmin.jpeg"
             />
             <img
-              src="../assets/images/project1/tabulationModal.jpeg"
+              src="../assets/images/project3/attendance1.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/tabulationModal.jpeg"
+              data-src="../assets/images/project3/attendance1.jpeg"
             />
             <img
-              src="../assets/images/project1/tabulationJudge.jpeg"
+              src="../assets/images/project3/attendance2.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/tabulationJudge.jpeg"
+              data-src="../assets/images/project3/attendance2.jpeg"
             />
             <img
-              src="../assets/images/project1/thumbnailTalentComp.jpg"
-              class="carousel-thumb w-32 h-20 object-cover rounded-lg selected"
-              data-type="video"
-              data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F5250380388519674%2F&show_text=false&width=560&t=0"
-            />
-            <img
-              src="../assets/images/project1/thumbnailBobords.jpg"
-              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
-              data-type="video"
-              data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FIbayawBayawanCity%2Fvideos%2F1034022194843911%2F&show_text=false&width=560&t=0"
-            />
-            <img
-              src="../assets/images/project1/openingSalvo.jpg"
+              src="../assets/images/project3/attendance3.jpeg"
               class="carousel-thumb w-32 h-20 object-cover rounded-lg"
               data-type="image"
-              data-src="../assets/images/project1/openingSalvo.jpg"
-            />
-            <img
-              src="../assets/images/project1/judges.jpg"
-              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
-              data-type="image"
-              data-src="../assets/images/project1/judges.jpg"
-            />
-            <img
-              src="../assets/images/project1/popDance.jpg"
-              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
-              data-type="image"
-              data-src="../assets/images/project1/popDance.jpg"
+              data-src="../assets/images/project3/attendance3.jpeg"
             />
           </div>
         </div>
-        <p class="text-sm text-base-content/60 mt-2">
-          Includes both system screenshots and photos/videos from actual events
-          where the system was used.
-        </p>
       </section>
 
       <!-- Description -->
       <section class="prose max-w-none mb-6">
         <p>
-          This project is a real-time tabulation system developed to support
-          live judged events organized by the HR department. It supports
-          multiple judges scoring multiple contestants simultaneously, with
-          results computed and displayed instantly.
+          The system supports barcode scanning, QR code scanning, and manual
+          attendee lookup for time-in and time-out tracking. It was designed to
+          handle real-time event flow where speed and usability were critical,
+          especially during peak entry and exit periods.
         </p>
         <p>
-          Judges submit scores through a web interface, while an admin dashboard
-          receives live updates via WebSockets. The system supports both
-          point-based and rank-based scoring models to accommodate different
-          competition formats.
+          Attendance records can be reviewed and exported into a printable daily
+          time record (DTR) format immediately after the event. Due to tight
+          timelines, the system prioritizes simplicity and operational
+          reliability over extensibility.
         </p>
         <p>
-          Built with Laravel, React, and TypeScript, the system enforces
-          role-based access and centralized scoring logic. It is optimized for
-          time-critical event usage, allowing administrators to generate and
-          print final rankings immediately after judging concludes.
+          This project demonstrates my ability to quickly translate operational
+          requirements into a working system, make practical technical
+          trade-offs, and deliver a solution under real-world constraints.
         </p>
       </section>
 
@@ -177,11 +150,11 @@
       <section class="mb-4">
         <h2 class="text-lg font-bold">Github Repository</h2>
         <a
-          href="https://github.com/kimpoy31/hr_tabulator_v2"
+          href="https://github.com/Team-HR/attendance_monitoring"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-link pl-0"
-          >https://github.com/kimpoy31/hr_tabulator_v2</a
+          >https://github.com/Team-HR/attendance_monitoring</a
         >
       </section>
       <!-- Tech Stack -->
@@ -190,9 +163,7 @@
         <div class="flex flex-wrap gap-2">
           <span class="badge badge-outline">Laravel</span>
           <span class="badge badge-outline">Laravel Breeze</span>
-          <span class="badge badge-outline">Reverb</span>
-          <span class="badge badge-outline">Echo</span>
-          <span class="badge badge-outline">Relational Database</span>
+          <span class="badge badge-outline">Docker</span>
           <span class="badge badge-outline">React</span>
           <span class="badge badge-outline">TypeScript</span>
           <span class="badge badge-outline">Tailwind CSS</span>
