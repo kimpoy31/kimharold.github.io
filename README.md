@@ -29,18 +29,4 @@ Frontend: React, TypeScript, Tailwind CSS
 
 Database: MySQL, Eloquent ORM
 
-Tools: Git, GitHub, Docker (basic)
-
-📌 Notes
-
-Some media shows actual events where these systems were deployed.
-
-Projects prioritize real-world usage and delivery over academic examples.
-
-📫 Contact
-
-Email: your@email.com
-
-Portfolio: https://yoursite.dev
-
-LinkedIn: https://linkedin.com/in/username
+Tools: Git, GitHub, Docker
